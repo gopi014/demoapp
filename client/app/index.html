@@ -1,0 +1,47 @@
+<!doctype html>
+<html ng-app="demoapp">
+
+<head>
+    <meta charset="utf-8">
+    <title>Demo blog</title>
+    <meta name="description" content="width=device-width">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <link href="styles/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- bower:js -->
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/ui-router/release/angular-ui-router.js"></script>
+    <!-- endbower -->
+    <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <!-- load all the controllers & services -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/HomeCtrl.js"></script>
+    <script src="scripts/controllers/addBlogCtrl.js"></script>
+    <script src="scripts/services/addBlogService.js"></script>
+    <!-- end controllers & services -->
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse" if="spy-scroll-id">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <p class="navbar-brand">Demo Blog</p>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li ng-class="{active: page.home}"><a href="#">Home</a></li>
+                    <li ng-class="{active: page.blog}"><a href="#addblog">Add Blog Entry</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- main content of the site goes here -->
+    <div ui-view class=""></div>
+</body>
+
+</html>

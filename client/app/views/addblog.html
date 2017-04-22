@@ -1,0 +1,35 @@
+<form>
+  <!-- Div for adding author email -->
+    <div class="form-group">
+        <label for="Author">Author Name:
+          <div class="alert alert-danger pull-right" ng-if="alerts.author">
+            {{alerts.author}}
+          </div>
+        </label>
+        <input type="email" class="form-control" id="Author" ng-model="form.author" placeholder="xx@yy.com">
+    </div>
+    <!-- end of author div -->
+    <!-- Div for Blog Title -->
+    <div class="form-group">
+        <label for="Title">Title:
+          <div class="alert alert-danger pull-right" ng-if="alerts.title">
+            {{alerts.title}}
+          </div>
+        </label>
+        <input type="text" class="form-control" ng-model="form.title" id="Title">
+    </div>
+    <!--end of Blog Title -->
+    <!--Div for Blog Description -->
+    <div class="form-group">
+        <label for="Description">Description:
+          <div class="alert alert-danger pull-right" ng-if="alerts.desc">
+            {{alerts.desc}}
+          </div>
+        </label>
+        <textarea class="form-control" rows="5" ng-model="form.desc" id="Description"></textarea>
+    </div>
+    <!-- end of blog description -->
+    <!-- submit button to submit form-->
+    <button type="submit" class="btn btn-primary btn-block" ng-click="submitForm()">Submit</button>
+    <!-- end of submit -->
+</form>

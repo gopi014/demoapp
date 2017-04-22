@@ -1,0 +1,20 @@
+.panel {
+  margin-left: 1%;
+  margin-right: 1%; }
+
+form {
+  background-color: #f5f1f1 !important;
+  margin: 5%; }
+
+.form-control {
+  width: 50% !important; }
+
+.form-group {
+  padding: 10px; }
+
+.btn-block {
+  width: 50% !important; }
+
+.alert {
+  padding: 2px !important;
+  margin-bottom: 0px !important; }

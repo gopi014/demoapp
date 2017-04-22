@@ -1,0 +1,15 @@
+<div class="panel-group">
+  <!-- div for displaying the blog entry -->
+    <div class="panel panel-primary" ng-repeat="data in blogData">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{data.title}} <span class="pull-right">{{data.timestamp | date:'EEE dd MMM yyyy hh:mm a'}}</span></h3>
+
+        </div>
+        <div class="panel-body well well-lg">
+            <p><b>Author:{{data.author}}</b></p>
+            <br />
+            {{data.desc}}
+        </div>
+    </div>
+    <!--end of div -->
+</div>
